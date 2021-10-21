@@ -12,35 +12,43 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
 
+
   shirts = [
     // TODO generate id
     new Shirt({
-      id: 34968273459,
+      id: 34968273459345,
       shirtName: 'Carhartt',
       shirtImg: 'https://imgcdn.carhartt.com/is/image/Carhartt/103296_001?fit=constrain,1&wid=798&hei=800&fmt=jpg',
       size: 'Small',
       color: 'red',
-      price: 10
+      price: 10,
+      quantity: 100
     }),
     new Shirt({
       id: 2485734565467,
-      shirtName: 'Carhartt',
-      shirtImg: 'https://imgcdn.carhartt.com/is/image/Carhartt/103296_001?fit=constrain,1&wid=798&hei=800&fmt=jpg',
+      shirtName: 'Hanes',
+      shirtImg: 'https://cdn.shopify.com/s/files/1/0220/4008/4552/products/Color_3pack_1024x1024.jpg?v=1598302156',
       size: 'medium',
       color: 'red',
-      price: 10
+      price: 5,
+      quantity: 10
+
     }),
     new Shirt({
-      id: 342582456,
-      shirtName: 'Carhartt',
+      id: 342582455734566,
+      shirtName: 'Rags',
       shirtImg: 'https://imgcdn.carhartt.com/is/image/Carhartt/103296_001?fit=constrain,1&wid=798&hei=800&fmt=jpg',
       size: 'Large',
       color: 'black',
-      price: 10
+      price: 1,
+      quantity: 10
+
     })
 
 
   ]
+
+  cart = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
