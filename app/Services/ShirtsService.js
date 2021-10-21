@@ -31,6 +31,12 @@ class ShirtsService {
 
     // item.push(item)
   }
+  buyStuff() {
+    let cart = ProxyState.cart
+    cart.length = 0
+
+    console.log(cart)
+  }
 
 }
 

@@ -23,7 +23,7 @@ function _draw() {
 function _drawCart() {
   const carts = ProxyState.cart
   let cartTemplate = ''
-  carts.forEach(c => cartTemplate += c.shirtName)
+  carts.forEach(c => cartTemplate += "$" + c.price + " " + c.shirtName + "<br>")
   document.getElementById('cart').innerHTML = cartTemplate
 }
 
@@ -48,6 +48,10 @@ export class ShirtsController {
     _drawCart()
     _draw()
 
+  }
+  buyStuff() {
+    shirtsService.buyStuff()
+    _drawCart()
   }
 
 }
