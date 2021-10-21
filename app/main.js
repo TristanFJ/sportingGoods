@@ -1,7 +1,11 @@
-import { ValuesController } from "./Controllers/ValuesController.js";
+import {
+  ShirtsController
+} from "./Controllers/ShirtsController.js";
 
 class App {
-  valuesController = new ValuesController();
+  // valuesController = new ValuesController();
+  shirtsController = new ShirtsController();
+
 }
 
 window["app"] = new App();

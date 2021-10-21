@@ -1,13 +1,18 @@
-import { ProxyState } from "../AppState.js";
-import { valuesService } from "../Services/ValuesService.js";
+import {
+  ProxyState
+} from "../AppState.js";
+import {
+  valuesService
+} from "../Services/ValuesService.js";
 
 
-//Private
+Private
+
 function _draw() {
   let values = ProxyState.values;
   let cardsTemplate = ''
   values.forEach(v => cardsTemplate += v.CardTemplate)
-  document.getElementById("app").innerHTML = /*html*/`
+  document.getElementById("app").innerHTML = /*html*/ `
   <div class="my-3">
     <button class="btn btn-secondary text-white elevation-2" onclick="app.valuesController.addValue()">Add Value</button>  
     <div class="values d-flex flex-wrap my-3">
